@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Search } from "lucide-react";
+import { Heart, ShoppingBag } from "lucide-react";
 import {Button} from "../components/ui/Button"
+import SearchBox from "../components/ui/input/SearchBox";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -39,10 +40,18 @@ const Header = () => {
           </ul>
         </nav>
 
-        {/* Search Icon */}
-        <Button variant="ghost" size="icon" className="hidden lg:flex">
-          <Search size={20} className="text-gray-600"/>
-        </Button>
+        {/* Search */}
+
+        {/* Icons */}
+        <div className="flex items-center gap-6">
+          <SearchBox />
+          <Heart size={40} className="text-gray-600 p-2 rounded-lg hover:bg-orange-400 hover:text-white transition-colors" />
+          <ShoppingBag
+            size={40}
+            className="text-gray-600 p-2 rounded-lg hover:bg-orange-400 hover:text-white transition-colors"
+          />
+         
+        </div>
       </div>
     </header>
   );
