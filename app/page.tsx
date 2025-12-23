@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Header />
       <main className="h-screen">
-        <div className="container mx-auto">
+        <div className="mx-auto">
           <Hero />
         </div>
       </main>
