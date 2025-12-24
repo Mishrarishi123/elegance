@@ -1,7 +1,6 @@
-
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Button } from "../ui/Button";
+import { Button } from "../../components/ui/Button";
 import { ArrowRight, Truck, RefreshCcw, ShieldCheck } from "lucide-react";
 
 const container = {
@@ -31,7 +30,6 @@ const fade = {
   },
 };
 
-
 const Hero = () => {
   return (
     <section>
@@ -51,7 +49,7 @@ const Hero = () => {
             </div>
 
             {/* text-content */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-white">
               <h1 className="text-6xl lg:text-8xl font-semibold font-playfair">
                 Timeless
                 <br />
