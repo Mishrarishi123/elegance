@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Button } from "./Button";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -56,7 +57,7 @@ const Hamburger = () => {
       {/* Right Drawer */}
       <aside
         className={`
-          fixed top-0 right-0 h-screen w-[80%] max-w-sm
+          fixed top-0 right-0 h-screen w-[60%] max-w-sm
           bg-white shadow-xl
           transform transition-transform duration-300 ease-in-out
           ${open ? "translate-x-0" : "translate-x-full"}
@@ -77,6 +78,12 @@ const Hamburger = () => {
             </Link>
           ))}
         </nav>
+
+        <div className="mt-auto px-8 pb-16 md:hidden">
+          <Button className="w-full text-black bg-white/60 py-2 border-2 border-gray-400">
+            Login
+          </Button>
+        </div>
       </aside>
     </>
   );

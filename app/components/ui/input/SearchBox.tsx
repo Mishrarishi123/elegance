@@ -21,7 +21,7 @@ const SearchBox = () => {
     <div
       className={`
         relative flex items-center rounded-xl transition-all duration-300
-        bg-gray-100 border border-gray-300 md:w-[52vw]  lg:w-[19vw]
+        bg-gray-100 border border-gray-300 md:w-[45vw]  lg:w-[19vw]
       `}
     >
       {/* Icon */}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Heart, ShoppingBag } from "lucide-react";
 import SearchBox from "../components/ui/input/SearchBox";
 import Hamburger from "../components/ui/Hamburger";
+import { Button } from "../components/ui/Button";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -26,12 +27,12 @@ const Header = () => {
             width={160}
             height={60}
             priority
-            className="w-[120px] sm:w-[140px] lg:w-[160px] h-auto"
+            className="w-30 sm:w-35 lg:w-40 h-auto"
           />
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block">
-            <ul className="flex gap-16 text-lg font-medium text-black font-inter">
+            <ul className="flex gap-16 lg:gap-10 text-lg font-medium text-black font-inter">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -49,7 +50,10 @@ const Header = () => {
           <div className="flex items-center gap-3 sm:gap-4">
             {/* Search: md and up inline */}
             <div className="hidden md:block">
-              <SearchBox />
+              {/* <SearchBox /> */}
+              <Button className="text-black px-6 bg-white/60 hover:bg-orange-400 hover:text-white py-2 hover:border-orange-500 border-2 border-gray-400">
+                Login
+              </Button>
             </div>
 
             {/* Icons: md and up */}
@@ -66,9 +70,6 @@ const Header = () => {
         </div>
 
         {/* Mobile Search (below header) */}
-        <div className="md:hidden pb-3">
-          <SearchBox />
-        </div>
       </div>
     </header>
   );
