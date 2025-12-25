@@ -51,9 +51,11 @@ const Header = () => {
             {/* Search: md and up inline */}
             <div className="hidden md:block">
               {/* <SearchBox /> */}
-              <Button className="text-black px-6 bg-white/60 hover:bg-orange-400 hover:text-white py-2 hover:border-orange-500 border-2 border-gray-400">
-                Login
-              </Button>
+              <Link href="/login">
+                <Button className="text-black px-6 bg-white/60 hover:bg-orange-400 hover:text-white py-2 hover:border-orange-500 border-2 border-gray-400">
+                  Login
+                </Button>
+              </Link>
             </div>
 
             {/* Icons: md and up */}
